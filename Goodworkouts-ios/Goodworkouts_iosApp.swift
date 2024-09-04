@@ -11,7 +11,9 @@ import SwiftData
 @main
 struct Goodworkouts_iosApp: App {
     init() {
-        AuthState.shared.attemptToRestoreAuthState()
+        Task { @MainActor in
+            await APIManager.attemptToRestoreAuthState()
+        }
     }
     
     var sharedModelContainer: ModelContainer = {

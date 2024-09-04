@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     
     var body: some View {
-        if (AuthState.shared.token == "") {
+        if (APIManager.shared.authToken == "") {
             LoginView()
         } else {
             TabView {
@@ -29,6 +29,11 @@ struct ContentView: View {
                 Text("GO")
                     .tabItem {
                         Label("GO", systemImage: "figure.run")
+                    }
+                
+                Text("Settings")
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
                     }
             }
         }

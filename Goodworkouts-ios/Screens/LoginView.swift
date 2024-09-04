@@ -38,11 +38,11 @@ struct LoginView: View {
                 }
             }
             
-            if AuthState.shared.isLoading {
+            if APIManager.shared.isLoading {
                 ProgressView()
             } else {
                 Button {
-                    AuthState.shared.attemptToLogin(withUsername: $username.wrappedValue, andWithPassword: $password.wrappedValue)
+                    APIManager.attemptToLogin(withUsername: $username.wrappedValue, andWithPassword: $password.wrappedValue)
                 } label: {
                     Text("Sign In")
                         .font(.title3)

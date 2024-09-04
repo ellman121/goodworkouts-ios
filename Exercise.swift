@@ -33,15 +33,13 @@ class Exercise {
     @MainActor
     static func fetchList(modelContext: ModelContext) async {
         do {
-            try modelContext.delete(model: Exercise.self)
-            let req = URLRequest(url: URL(string: "http://localhost:2000/exercises")!)
-                
-            let (data, _) = try await URLSession.shared.data(for: req)
-            
+            let url = URL(string: "http://localhost:2000/exercises")!
+            let (data, _) = try await APIManager.doAuthorizedRequest(forURL: url)
             guard let decodedResp = try? JSONDecoder().decode([ExerciseDTO].self, from: data) else {
                 throw APIError.decodeError
             }
             
+            try modelContext.delete(model: Exercise.self)
             for itemToStore in decodedResp {
                 modelContext.insert(Exercise(fromDTO: itemToStore))
             }

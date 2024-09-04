@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F1933FB2C86301F00DB43B1 /* Goodworkouts_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1933FA2C86301F00DB43B1 /* Goodworkouts_iosApp.swift */; };
 		4F1933FD2C86301F00DB43B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1933FC2C86301F00DB43B1 /* ContentView.swift */; };
-		4F1933FF2C86301F00DB43B1 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1933FE2C86301F00DB43B1 /* AuthState.swift */; };
+		4F1933FF2C86301F00DB43B1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1933FE2C86301F00DB43B1 /* APIManager.swift */; };
 		4F1934012C86302000DB43B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1934002C86302000DB43B1 /* Assets.xcassets */; };
 		4F1934042C86302000DB43B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1934032C86302000DB43B1 /* Preview Assets.xcassets */; };
 		4F19340E2C86302000DB43B1 /* Goodworkouts_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F19340D2C86302000DB43B1 /* Goodworkouts_iosTests.swift */; };
@@ -41,7 +41,7 @@
 		4F1933F72C86301F00DB43B1 /* Goodworkouts-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goodworkouts-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1933FA2C86301F00DB43B1 /* Goodworkouts_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goodworkouts_iosApp.swift; sourceTree = "<group>"; };
 		4F1933FC2C86301F00DB43B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4F1933FE2C86301F00DB43B1 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		4F1933FE2C86301F00DB43B1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4F1934002C86302000DB43B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F1934032C86302000DB43B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F1934092C86302000DB43B1 /* Goodworkouts-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Goodworkouts-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBE685A2C877C5E00EDFB22 /* Exercise.swift */,
-				4F1933FE2C86301F00DB43B1 /* AuthState.swift */,
+				4F1933FE2C86301F00DB43B1 /* APIManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			files = (
 				4FBE685B2C877C5E00EDFB22 /* Exercise.swift in Sources */,
 				4F1933FD2C86301F00DB43B1 /* ContentView.swift in Sources */,
-				4F1933FF2C86301F00DB43B1 /* AuthState.swift in Sources */,
+				4F1933FF2C86301F00DB43B1 /* APIManager.swift in Sources */,
 				4FBE68592C86383300EDFB22 /* LoginView.swift in Sources */,
 				4F1933FB2C86301F00DB43B1 /* Goodworkouts_iosApp.swift in Sources */,
 				4FBE685D2C87811100EDFB22 /* ExerciseList.swift in Sources */,
