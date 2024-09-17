@@ -14,6 +14,7 @@ struct ExerciseList: View {
     
     @State var isLoading: Bool = false
     @State var isRefreshing: Bool = false
+    @State var showEditor: Bool = false
     
     @MainActor
     private func doFetch() async {
@@ -34,7 +35,12 @@ struct ExerciseList: View {
                         }
                 }
             }
+                .shadow(radius: 4)
                 .navigationTitle("Exercises")
+                .sheet(isPresented: $showEditor) {
+                    ExerciseEditor(exercise: nil)
+                        .presentationDetents([.medium])
+                }
                 .overlay {
                     if isRefreshing {
                     } else if isLoading {
@@ -52,8 +58,10 @@ struct ExerciseList: View {
                     self.isRefreshing = false
                 }
                 .toolbar {
-                    Button("Add") {
-                        print("ADD")
+                    ToolbarItem(placement: .primaryAction) {
+                        Button("Add Exercise") {
+                            showEditor = true
+                        }
                     }
                 }
         }

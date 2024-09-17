@@ -25,6 +25,8 @@ struct LoginEndpointResponse: Decodable {
     let refreshToken: String
 }
 
+let BASE_URL = "http://localhost:2000"
+
 @Observable class APIManager {
     var isLoading: Bool = false
     var authToken: String = ""
@@ -88,7 +90,7 @@ struct LoginEndpointResponse: Decodable {
         await APIManager.attemptToReauthenticate()
     }
     
-    static func doAuthorizedRequest(forURL url: URL, withMethod method: HTTPMethods = HTTPMethods.GET) async throws -> (Data, HTTPURLResponse) {
+    static func doAuthorizedRequest(forURL url: URL, withMethod method: HTTPMethods = HTTPMethods.GET, usingData data: Data? = nil) async throws -> (Data, HTTPURLResponse) {
         let token = APIManager.shared.authToken
         if token == "" {
             throw APIError.noToken
@@ -97,6 +99,7 @@ struct LoginEndpointResponse: Decodable {
         var req = URLRequest(url: url)
         req.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         req.httpMethod = method.rawValue
+        req.httpBody = data
 
         var (data, resp) = try await doRequest(req: req)
         if resp.statusCode == 401 {

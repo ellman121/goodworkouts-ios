@@ -18,6 +18,7 @@
 		4FBE68592C86383300EDFB22 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE68582C86383300EDFB22 /* LoginView.swift */; };
 		4FBE685B2C877C5E00EDFB22 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE685A2C877C5E00EDFB22 /* Exercise.swift */; };
 		4FBE685D2C87811100EDFB22 /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE685C2C87811100EDFB22 /* ExerciseList.swift */; };
+		4FBE68652C99F85500EDFB22 /* ExerciseEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE68642C99F85500EDFB22 /* ExerciseEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4FBE68582C86383300EDFB22 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4FBE685A2C877C5E00EDFB22 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = SOURCE_ROOT; };
 		4FBE685C2C87811100EDFB22 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
+		4FBE68642C99F85500EDFB22 /* ExerciseEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				4FBE68582C86383300EDFB22 /* LoginView.swift */,
 				4FBE685C2C87811100EDFB22 /* ExerciseList.swift */,
+				4FBE68642C99F85500EDFB22 /* ExerciseEditor.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				4FBE685B2C877C5E00EDFB22 /* Exercise.swift in Sources */,
 				4F1933FD2C86301F00DB43B1 /* ContentView.swift in Sources */,
 				4F1933FF2C86301F00DB43B1 /* APIManager.swift in Sources */,
+				4FBE68652C99F85500EDFB22 /* ExerciseEditor.swift in Sources */,
 				4FBE68592C86383300EDFB22 /* LoginView.swift in Sources */,
 				4F1933FB2C86301F00DB43B1 /* Goodworkouts_iosApp.swift in Sources */,
 				4FBE685D2C87811100EDFB22 /* ExerciseList.swift in Sources */,

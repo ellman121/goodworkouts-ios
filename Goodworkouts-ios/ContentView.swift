@@ -16,19 +16,14 @@ struct ContentView: View {
             LoginView()
         } else {
             TabView {
-                ExerciseList()
-                    .tabItem {
-                        Label("Exercieses", systemImage: "dumbbell")
-                    }
-                
                 Text("World")
                     .tabItem {
                         Label("Routines", systemImage: "list.clipboard")
                     }
-                
-                Text("GO")
+
+                ExerciseList()
                     .tabItem {
-                        Label("GO", systemImage: "figure.run")
+                        Label("Exercieses", systemImage: "dumbbell")
                     }
                 
                 Text("Settings")
